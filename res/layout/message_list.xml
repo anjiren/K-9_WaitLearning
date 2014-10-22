@@ -7,7 +7,26 @@
     <FrameLayout
         android:id="@+id/message_list_container"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent" 
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/exercise_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/waiting_exercise_question" />
+        
+        <Button
+            android:id="@+id/exercise_answer1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/waiting_exercise_answer1" />
+
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/message_view_container"

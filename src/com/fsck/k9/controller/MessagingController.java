@@ -4309,6 +4309,8 @@ public class MessagingController implements Runnable {
      * @param account
      * @param listener
      */
+    
+    // TODO
     public void checkMail(final Context context, final Account account,
                           final boolean ignoreLastCheckedTime,
                           final boolean useManualWakeLock,

@@ -789,8 +789,10 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 		// Always reset both layouts, just in case...
 		mHeaderLayout.reset();
 		mFooterLayout.reset();
-
-		smoothScrollTo(0);
+		
+		// TODO	
+		// smoothScrollTo(0);
+		smoothScrollTo(-200);
 	}
 
 	@Override

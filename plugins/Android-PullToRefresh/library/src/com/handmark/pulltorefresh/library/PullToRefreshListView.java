@@ -94,7 +94,8 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 				listViewLoadingView = mHeaderLoadingView;
 				oppositeListViewLoadingView = mFooterLoadingView;
 				selection = 0;
-				scrollToY = getScrollY() + getHeaderSize();
+				// TODO
+				scrollToY = getScrollY() + 2*getHeaderSize();
 				break;
 		}
 
@@ -122,7 +123,9 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 			mRefreshableView.setSelection(selection);
 
 			// Smooth scroll as normal
-			smoothScrollTo(0);
+			// TODO
+			// smoothScrollTo(0);
+			smoothScrollTo(scrollToY);
 		}
 	}
 
@@ -153,7 +156,8 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 			default:
 				originalLoadingLayout = getHeaderLayout();
 				listViewLoadingLayout = mHeaderLoadingView;
-				scrollToHeight = -getHeaderSize();
+				// TODO
+				scrollToHeight = -2*getHeaderSize();
 				selection = 0;
 				scrollLvToEdge = Math.abs(mRefreshableView.getFirstVisiblePosition() - selection) <= 1;
 				break;

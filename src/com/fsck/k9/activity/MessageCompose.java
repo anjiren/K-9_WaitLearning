@@ -2327,7 +2327,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void addAttachmentsFromResultIntent(Intent data) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BASE) {
             ClipData clipData = data.getClipData();
             if (clipData != null) {
                 for (int i = 0, end = clipData.getItemCount(); i < end; i++) {

@@ -58,7 +58,9 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
@@ -1145,6 +1147,17 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
                     new PullToRefreshBase.OnRefreshListener<ListView>() {
                 @Override
                 public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+//                	// TODO: Insert exercise view here.
+                	Button myButton = new Button(mContext);
+                	myButton.setLayoutParams(new LinearLayout.LayoutParams(
+                	                                     LinearLayout.LayoutParams.MATCH_PARENT,
+                	                                     LinearLayout.LayoutParams.MATCH_PARENT));
+                    //View view = mInflater.inflate(R.layout.message_list_item, this, false);
+                	//mPullToRefreshView.addHeaderView(myButton);
+                	//View waitingExerciseQuestion = refreshView.findViewById(R.id.exercise_question);   	
+                	//waitingExerciseQuestion.setVisibility(View.VISIBLE);
+//                	View waitingExerciseAnswer1 = mPullToRefreshView.findViewById(R.id.exercise_answer1);
+//                	waitingExerciseAnswer1.setVisibility(View.VISIBLE);
                     checkMail();
                 }
             });
